@@ -6,19 +6,22 @@ export class UserService {
 
   constructor() {
     this.userAPI = new UserAPI();
-  }
+  };
 
-  async getUser(userId: string): Promise<void> {
+  createUser = async (user: User): Promise<void> => {
+    await this.userAPI.createUser(user);
+  };
+
+  getUserById = async (userId: string): Promise<void> =>{
     // add logic to handle userId validation
-    await this.userAPI.getUser(userId);
-  }
+    await this.userAPI.getUserById(userId);
+  };
 
-  async addUserPoints(userId: string, points: string): Promise<void> {
-    // Add logic to handle userId validation and 
-    await this.userAPI.addUserPoints(userId, points);
+  updateUserById = async(user: User): Promise<void> =>{
+    // add logic to handle updating UserId 
   }
-
-  async createUser(user: User): Promise<void> {
-    // add logic to handle user validation
-  }
-}
+  
+  addUserPointsById = async (userId: string, points: string): Promise<void> =>{
+    await this.userAPI.addUserPointsById(userId, points);
+  };
+};

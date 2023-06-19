@@ -1,3 +1,5 @@
+import * as yup from 'yup';
+
 export interface User {
   id: string;
   name: string;
@@ -6,7 +8,11 @@ export interface User {
 };
 
 export const validateUser = async (user: User): Promise<boolean> => {
-  const isValid = !!user.name && !!user.email && !!user.id;
+  const schema = yup.object().shape({
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    password: yup.string().required(),
+  });
 
-  return isValid;
+  return schema.isValid(user);
 };
