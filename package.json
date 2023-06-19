@@ -1,0 +1,34 @@
+{
+  "name": "squidy",
+  "version": "1.0.0",
+  "description": "open-source gamification api for developers",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ginorey/squidy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ginorey/squidy/issues"
+  },
+  "homepage": "https://github.com/ginorey/squidy#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.0",
+    "koa-router": "^12.0.0",
+    "mongodb": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.6",
+    "@types/koa-bodyparser": "^4.3.10",
+    "@types/koa-router": "^7.4.4",
+    "nodemon": "^2.0.22"
+  }
+}
